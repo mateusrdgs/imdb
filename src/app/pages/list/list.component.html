@@ -1,0 +1,24 @@
+<mat-toolbar color="primary"></mat-toolbar>
+
+<main class="list">
+  <div class="container">
+    <ul class="movies" *ngIf="(movies$ | async) as movies; else loading">
+      <li class="movie" *ngFor="let movie of movies">
+        <app-movie-card
+          [id]="movie?.id"
+          [title]="movie?.title"
+          [fullTitle]="movie?.fullTitle"
+          [year]="movie?.year"
+          [image]="movie?.image"
+          [crew]="movie?.crew"
+          [imDbRating]="movie?.imDbRating"
+        ></app-movie-card>
+      </li>
+    </ul>
+
+    <ng-template #loading>
+      <mat-spinner></mat-spinner>
+    </ng-template>
+
+  </div>
+</main>

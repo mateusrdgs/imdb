@@ -1,0 +1,28 @@
+.details {
+  padding: 48px 0;
+  position: relative;
+  min-height: calc(100vh - 64px);
+  box-sizing: border-box;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+
+    > div {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+  }
+
+  .poster {
+    max-width: 320px;
+  }
+
+  .mat-spinner {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+  }
+}

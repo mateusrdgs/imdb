@@ -1,0 +1,21 @@
+.list {
+  padding: 48px 0;
+  position: relative;
+  min-height: calc(100vh - 64px);
+  box-sizing: border-box;
+
+  .movies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    list-style: none;
+  }
+
+  .mat-spinner {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+  }
+}
+

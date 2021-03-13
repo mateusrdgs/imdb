@@ -1,0 +1,24 @@
+
+<mat-card class="movie-card">
+  <a [routerLink]="['details', id]">
+    <mat-card-header>
+      <mat-card-title>
+        {{ title }}
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{ year }}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="image" [alt]="fullTitle">
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+          {{ crew }}
+        </mat-list-item>
+        <mat-list-item>
+          <b>IMDB:</b> {{ imDbRating }}
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </a>
+</mat-card>

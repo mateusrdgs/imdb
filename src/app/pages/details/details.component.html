@@ -1,0 +1,21 @@
+<mat-toolbar color="primary"></mat-toolbar>
+
+<main class="details">
+  <ng-container *ngIf="(details$ | async) as details; else loading">
+    <div class="container">
+      <img class="poster" [src]="details?.image">
+      <div>
+        <h1>{{ details?.title }}</h1>
+        <h2>{{ details?.year }}</h2>
+        <p><b>Release date</b>: {{ details?.releaseDate | date }}</p>
+        <p><b>Director</b>: {{ details?.directors }}</p>
+        <p><b>Starring</b>: {{ details?.stars }}</p>
+        <p><b>IMDB</b>: {{ details?.imDbRating }}</p>
+        <p><b>Plot</b>: {{ details?.plot }}</p>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #loading>
+    <mat-spinner></mat-spinner>
+  </ng-template>
+</main>
